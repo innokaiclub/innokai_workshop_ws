@@ -1,0 +1,119 @@
+creating workspaces:
+>> mkdir -p innokai_workshop_ws/src
+>> cd innokai_workshop_ws/
+
+--------------------------------
+creating packages:
+>> cd src 
+>> catkin_create_pkg ros_basic std_msgs rospy
+
+---------------------------------
+compiling: 
+
+>> cd..  (inside folder innokai_workshop_ws)
+>> catkin_make 
+
+--------------------------------
+sourcing:
+
+>> rospack profile
+>> source ~/innokai_workshop_ws/devel/setup.bash
+>> rospack profile
+
+--------------------------------
+In New Terminal:
+>> source ~/innokai_workshop_ws/devel/setup.bash
+>> rospack profile
+--------------------------------
+Run python
+>> python
+
+------------------------------
+Install package:
+
+>> sudo apt-get install ros-kinetic-rospack
+-----------------------------
+String in python:
+ 
+>> print "brian's house"
+>> print "hello " + "world"
+
+------------------------------------
+Math Operation in Python
+>> 1+1
+>> 4*2
+>> 8/4
+>> 7/5
+>> 7%5
+--------------------------------
+Type of data in Python
+>> type(100)
+>> type(100.1)
+>> type(1+4j)
+>> type("saya")
+--------------------------------
+Format specifier in Python:
+>> print "%0.2f" %(5.0/3.0)
+--------------------------------
+Names for Data
+>>test_data_workshop
+-------------------------------
+Tuples in Python (Fix) 
+>> food_name = ("cake", "cola", "donut")
+>> food_name[1]
+>> food_name[0]
+----------------------------------------
+List in Python (Editable)
+>> customer_name = ['zool','brian','ahmad']
+>> customer_name[0] = 'utm'
+-------------------------------------------
+>> tuple_num = (3, 2, 10)
+>> list_num = [10, 20, 36]
+>> tuple_num[0]+tuple_num[2]
+>> list_num[0]+tuple_num[0]
+-------------------------------------------
+String as a list
+>> name = "Brian" 
+>> name[2]
+----------------------------------
+Slicing Sequences
+>> slice_me = ('a','b','c','d','e','f')
+>> sliced = slice_me[2:4]
+>> sliced
+---------------------------------------------
+If-else statement
+>> a = 56
+>> b = 98
+>> c = 1
+>> if a==b:
+	print "a and b are the same"
+   elif a<b: 
+	print "a is smaller" 	
+   else:
+	print "a and b are not the same" 
+-------------------------------------------
+>> n = 10
+>> sum = 0
+>> i = 1
+>> while i <= n:
+...    sum = sum + i
+...    i = i+1    # update counter
+>> print("The sum is", sum)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+

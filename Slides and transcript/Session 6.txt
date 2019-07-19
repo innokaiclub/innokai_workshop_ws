@@ -1,0 +1,66 @@
+Installing Your Camera in Your Laptop
+
+>> cd innokai_workshop_ws
+>> rosdep install --from-paths src/usb_cam -y
+>> git clone https://www.github.com/ros-drivers/usb_cam.git
+
+----------------------------------------------------------------------------
+In new terminal
+
+>> cd innokai_workshop_ws/src
+>> git clone https://www.github.com/ros-drivers/usb_cam.git
+
+In new Terminal
+>> cd ~/innokai_workshop_ws
+>> catkin_make
+-----------------------------------------------------------------------------Testing Your Camera
+In Your Laptop
+>> roscore
+
+In Your Turtlebot
+>> rosrun usb_cam usb_cam_node _pixel_format:=yuyv _video_device:=/dev/video0
+
+Go to ~/catkin_ws/src/usb_cam/launch and click usb_cam-test.launch and delete two lines - "images node".
+
+>> roslaunch usb_cam usb_cam-test.launch
+
+In Your Laptop
+>>  rqt_image_view
+---------------------------------------------------------------------------
+Converting Raw Image into CV2 format using cv_bridge
+
+>> rospack find cv_bridge 
+
+- complete the code and chmod +x it
+
+In New Terminal
+>> source ~/innokai_workspace_ws/devel/setup.bash 
+>> rosrun ros_basic cv_bridge_ex.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+

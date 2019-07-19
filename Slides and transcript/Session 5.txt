@@ -1,0 +1,76 @@
+Publish and Subscribe
+
+- Write the code and chmod +x it
+
+Open Terminal
+>> roscore
+
+In New Terminal
+>> source ~/innokai_workspace_ws/devel/setup.bash 
+>> rosrun ros_basic message_pub.py
+
+In New Terminal
+>> source ~/innokai_workspace_ws/devel/setup.bash 
+>> rosrun ros_basic topic_subscriber.py
+-----------------------------------------------------------------------
+Using LDR Sensor (Use Subscriber)
+
+- Write the code and chmod +x it
+
+After connecting your Turtlebot3, check the topic /scan
+In New Terminal
+>> rostopic list
+>> rostopic echo /scan
+>> source ~/innokai_workspace_ws/devel/setup.bash 
+>> rosrun ros_basic ldr.py
+----------------------------------------------------------------------------
+RVIZ to Visualize Your LDR
+
+Open Terminal in Laptop 
+>> roslaunch turtlebot3_bringup turtlebot3_remote.launch
+
+In New Terminal
+>> rosrun rviz rviz -d 'rospack find turtlebot3_description'/rviz/model.rviz 
+
+Step in RVIZ
+1. Go to Fixed Frame: Select "base_link"
+2. Go to ADD button: Select "Robot Model"
+3. Go to ADD button: Select "Laser Scan"
+4. Go to Topic: Select "/scan"
+-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+Connect Turtlebot3 via wifi 
+- Both must connect to the same network
+
+>> ifconfig
+look for ip address for turlebot3 - 192.168.43.36
+look for ip address for laptop(master) - 192.168.43.234
+---------------------------------------------------------
+For Your Laptop
+>> gedit ~/.bashrc
+New opened file (End of the line): 
+export ROS_MASTER_URI=http://<laptop_ipaddress>:11311 
+export ROS_HOSTNAME=<laptop_ipaddress>
+Then, SAVE this file
+Open new terminal (CTRL+T):
+>> source ~/.bashrc
+---------------------------------------------------------
+For Your Turtlebot
+>> pluma ~/.bashrc  (if your turtlebot use MATE)
+>> leafpad ~/.bashrc (if your turtlebot use RASBIAN) 
+New opened file (End of the line): 
+export ROS_MASTER_URI=http://<laptop_ipaddress>:11311 
+export ROS_HOSTNAME=<turtlebot_ipaddress>
+
+Then, SAVE this file
+Open new terminal (CTRL+T):
+>> source ~/.bashrc
+-------------------------------------------------
+In your laptop (MASTER)
+>> roscore
+
+In your Turtlebot
+>> roslaunch turtlebot3_bringup turtlebot3_robot.launch
+
+In Your Laptop (MASTER)
+Open New Terminal
+>> rostopic list
+---------------------------------------------------
+Installing Turtlebot - root
+
+Open New Terminal
+>> sudo apt-get install ros-kinetic-turtlebot3*
+>> gedit ~/.bashsc
+export ROS_MASTER_URI=http://localhost:11311 
+export ROS_HOSTNAME=localhost 
+Then, SAVE this file
+>> source ~/.bashrc
+
+Cloning the Model for Gazebo
+Open New Terminal
+>> hg clone https://bitbucket.org/osrf/gazebo_models
+
+Exploring Gazebo in your laptop 
+>> roslaunch turtlebot3_gazebo turtlebot3_world.launch
+-------------------------------------------------------
+
+
+
+
+
+
+ 

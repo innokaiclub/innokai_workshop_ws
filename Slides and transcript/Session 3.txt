@@ -1,0 +1,57 @@
+Open a Terminal 
+>> roscore
+
+In New Terminal
+>> rosrun turtlesim turtlesim_node
+---------------------------------------------------
+Publish using Command 
+New terminal 
+>> rostopic list
+>> rostopic pub /turtle1/cmd_vel geometry_msgs/Twist "linear:
+x: 3.0
+y: 0.0
+z: 0.0
+angular:
+x: 0.0
+y: 0.0
+z: 5.0"
+-------------------------------------------------------
+Publish using Python
+- Create empty document (message_pub.py) on SRC folder
+- Complete the code
+In new terminal 
+>> source ~/innokai_workspace_ws/devel/setup.bash
+>> roscd ros_basic/src
+>> ls
+>> chmod +x message_pub.py
+>> ls
+
+Close all terminal, then open a new one
+>> source ~/innokai_workspace_ws/devel/setup.bash
+>> roscore 
+In new Terminal
+>> source ~/innokai_workspace_ws/devel/setup.bash 
+>> rosrun ros_basic message_pub.py
+In new Terminal
+>> rqt_graph
+>> rostopic list
+In new Terminal
+>> rostopic echo /counter
+-------------------------------------------------------
+Twist Message Type
+>> rosmsg show geometry_msgs/Int32
+>> rosmsg show geometry_msgs/Twist
+>> rosmsg show turtlesim/Pose
+
+--------------------------------------------
+- Complete the code
+In new Terminal
+>> roscore
+Open new Terminal
+>> rosrun turtlesim turtlesim_node
+Open new Terminal
+>> source ~/innokai_workspace_ws/devel/setup.bash 
+>> roscd ros_basic/src/
+>> chmod +x <yourfile>.py
+>> rosrun ros_basic <yourfile>.py
+---------------------------------------------------

@@ -1,0 +1,36 @@
+Program Your Turtlebot after connecting via wifi
+
+- Complete the code
+
+Open new Terminal
+>> source ~/innokai_workspace_ws/devel/setup.bash 
+>> rostopic list
+>> roscd ros_basic/src/
+>> chmod +x <yourfile>.py
+>> rosrun ros_basic <yourfile>.py
+--------------------------------------------------
+Program Turtlebot inside Gazebo (Simulation)
+
+- Complete the code
+
+Open new Terminal
+>> gedit ~/.bashrc
+export ROS_MASTER_URI=http://localhost:11311 
+export ROS_HOSTNAME=localhost
+- SAVE and Close
+>> source ~/.bashrc
+>> roslaunch turtlebot3_gazebo turtlebot3_stage_1.launch
+
+Open New Terminal
+>> source ~/innokai_workshop_ws/devel/setup.bash
+>> rostopic list
+>> rosrun ros_basic <yourfile>.py
+
+#add this in your python program
+cmd_vel.angular.z = 2.0
+
+>> source ~/.bashrc
+>> roslaunch turtlebot3_gazebo turtlebot3_
+
+---------------------------------------------------------
+
